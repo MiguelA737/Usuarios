@@ -1,5 +1,8 @@
 <?php
     session_start();
+    if(empty($_SESSION["users"])) {
+        header("Location: ../index.html");
+    }
 ?>
 <html>
     <head>

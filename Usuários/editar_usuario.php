@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    if((empty($_POST["id"]) && $_POST["id"] != 0) || empty($_POST["name"]) || empty($_POST["birthdate"]) || empty($_POST["email"])) {
+    if((!isset($_POST["id"])) || empty($_POST["name"]) || empty($_POST["birthdate"]) || empty($_POST["email"])) {
         
         echo "<p>O seguinte erro aconteceu: <span style='color:#FF0000'>os campos \"Id\", \"Nome\", \"Data de Nascimento\" e \"E-mail\" não foram devidamente preenchidos.</span></p>";
         echo "<a href='listar_usuarios.php'>Clique neste link para voltar à listagem.</a>";
